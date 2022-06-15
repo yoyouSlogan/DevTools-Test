@@ -1,0 +1,60 @@
+.invertCard {
+    width: 246px;
+    height: 468px;
+    position: relative;
+    perspective: 790px;
+    margin: 0 55px;
+}
+
+.front {
+    position: absolute;
+    z-index: 0;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.back {
+    position: absolute;
+    z-index: 1;
+    transform: rotateY(-179deg);
+    backface-visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.invertCard.invert .front {
+    transform: rotateY(180deg);
+}
+
+.invertCard.invert .back {
+    transform: rotateX(0deg) rotateY(0deg);
+}
+
+.container {
+    width: 1080px;
+    margin: 20px auto;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.box {
+    background-color: #a0d8ef;
+    border: 10px solid #90d7ec;
+    background-clip: content-box;
+    width: 222px;
+    height: 333px;
+    padding: 13px;
+    display: flex;
+}
+
+.back .box {
+    background-color: #004687;
+    border-color: #004689;
+    color: #fff;
+}
+
+p {
+    font-size: 33px;
+    align-self: center;
+    padding: 13px;
+    margin: 0 auto;
+}

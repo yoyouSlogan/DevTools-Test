@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>DevTools-Test</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>自分以外の名前削除</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>名前の背景色を変更</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>新しい文字「text」を追加してフォントサイズを100pxに</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>新しい文字「text」を追加して文字色を赤に</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>Chrome DevToolsの文字を削除</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>Chrome DevToolsの文字シャドーを追加</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>Chrome DevToolsの文字にtitleクラスを追加</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>Chrome DevToolsの文字に赤いボーダーを追加</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>Chrome DevToolsの文字と名前タイトルの間隔を100px開けて</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>すべてのリンク文字スタイルを一括削除</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>リンク文字のアンダーラインを一括削除</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>すべてのリンク文字リストを一括複製</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>リンク文字hover時の背景色を赤に</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>サイト全体の背景色を赤に</p>
+                </div>
+            </div>
+        </div>
+        <div class="invertCard clickInvertCard">
+            <div class="front">
+                <div class="box">
+                    <p> CLICK </p>
+                </div>
+            </div>
+            <div class="back">
+                <div class="box">
+                    <p>iphoneSEのデバイスビューにしてフォントサイズ適度に調整</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script>
+        $(function () {
+            $(".container").html($(".invertCard").sort(function (a, b) {
+                    return Math.random() - 0.5 
+                }
+            ));
+        });
+        $(function () {
+            $('.clickInvertCard').on('click', function () {
+                if ($(this).hasClass('invert')) {
+                    $(this).removeClass('invert');
+                } else {
+                    $(this).addClass('invert');
+                }
+            });
+        });
+        
+        // $(function () {
+        //         $("#kf_ul").html($("#kf_ul li").sort(function (a, b) { return Math.random() - 0.5 }));
+        // });
+    </script>
+</body>
+</html>
